@@ -6,7 +6,7 @@ import time
 
 app = Flask(__name__)
 
-weather_classes = ['clear', 'cloudy', 'drizzly', 'foggy', 'hazey', 'misty', 'rainy', 'smokey', 'thunderstorm']
+weather_classes = ['clear', 'cloudy', 'drizzly', 'foggy', 'hazey', 'misty', 'rain', 'smokey', 'thunderstorm']
 
 # Column names the model was trained with, in the order it expects them
 FEATURE_COLUMNS = [
