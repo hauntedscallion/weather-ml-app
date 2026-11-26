@@ -23,7 +23,7 @@ jobs:
         run: echo "version=$(cat VERSION)" >> "$GITHUB_OUTPUT"
 
       - name: Set image version in deployment manifest
-        run: sed -i "s|image: .*|image: jbett06/weather-ml-app:${{ steps.ver.outputs.version }}|" k8s/deployment.yaml
+        run: sed -i "s|image: .*|image: hauntedscallion/weather-ml-app:${{ steps.ver.outputs.version }}|" k8s/deployment.yaml
 
       - name: Apply Kubernetes manifests
         run: |

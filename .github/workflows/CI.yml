@@ -80,11 +80,11 @@ jobs:
       - name: Tag Docker image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          docker tag weather-ml-app jbett06/weather-ml-app:${{ steps.ver.outputs.version }}
-          docker tag weather-ml-app jbett06/weather-ml-app:latest
+          docker tag weather-ml-app hauntedscallion/weather-ml-app:${{ steps.ver.outputs.version }}
+          docker tag weather-ml-app hauntedscallion/weather-ml-app:latest
 
       - name: Push Docker image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          docker push jbett06/weather-ml-app:${{ steps.ver.outputs.version }}
-          docker push jbett06/weather-ml-app:latest
+          docker push hauntedscallion/weather-ml-app:${{ steps.ver.outputs.version }}
+          docker push hauntedscallion/weather-ml-app:latest
